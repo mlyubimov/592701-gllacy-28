@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Maxim Lyubimov](https://up.htmlacademy.ru/htmlcss/28/user/592701).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0).
 
 ---
 
