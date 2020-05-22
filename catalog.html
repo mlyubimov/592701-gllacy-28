@@ -94,7 +94,75 @@
 
 			<section>
 				<h3>Фильтры товаров</h3>
-				<!-- Форма фильтрации -->
+				<fieldset>
+					<legend>Сортировка:</legend>
+					<!-- label и select для сортировки -->
+				</fieldset>
+				<fieldset>
+					<legend>
+						Цена:
+						<label>
+							<input type="text" name="filters-minprice" value="100">
+						</label>
+						&#8381; -
+						<label>
+							<input type="text" name="filters-maxprice" value="500">
+						</label>
+						&#8381;
+					</legend>
+					<div>
+						<div></div> <!-- прямая между min и max -->
+						<div></div> <!-- toggle min -->
+						<div></div> <!-- toggle max -->
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Жирность:</legend>
+					<ul>
+						<li>
+							<input id="filters-0-percent" type="radio" name="filters-fat">
+							<label for="filters-0-percent">0 &percnt;</label>
+						</li>
+						<li>
+							<input id="filters-before-10-percent" type="radio" name="filters-fat" value="up to 10" checked>
+							<label for="filters-before-10-percent">до 10 &percnt;</label>
+						</li>
+						<li>
+							<input id="filters-before-30-percent" type="radio" name="filters-fat" value="up to 30">
+							<label for="filters-before-30-percent">до 30 &percnt;</label>
+						</li>
+						<li>
+							<input id="filters-more-30-percent" type="radio" name="filters-fat" value="above 10">
+							<label for="filters-more-30-percent">больше 30 &percnt;</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Наполнители:</legend>
+					<ul>
+						<li>
+							<input id="filters-chocolate" type="checkbox" name="filters-chocolate" checked>
+							<label for="filters-chocolate">шоколадные</label>
+						</li>
+						<li>
+							<input id="filters-sugar" type="checkbox" name="filters-sugar" checked>
+							<label for="filters-sugar">сахарная присыпка</label>
+						</li>
+						<li>
+							<input id="filters-fruits" type="checkbox" name="filters-fruits">
+							<label for="filters-fruits">фрукты</label>
+						</li>
+						<li>
+							<input id="filters-syrups" type="checkbox" name="filters-fruits">
+							<label for="filters-syrups">сиропы</label>
+						</li>
+						<li>
+							<input id="filters-jams" type="checkbox" name="filters-fruits">
+							<label for="filters-jams">джемы</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button>Применить</button>
 			</section>
 
 			<ul>
@@ -205,7 +273,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">1</a>
+					<a>1</a>
 				</li>
 				<li>
 					<a href="#">2</a>
