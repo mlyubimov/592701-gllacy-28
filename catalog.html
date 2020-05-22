@@ -96,7 +96,13 @@
 				<h3>Фильтры товаров</h3>
 				<fieldset>
 					<legend>Сортировка:</legend>
-					<!-- label и select для сортировки -->
+					<label for="filters-sorting">Сортировка:</label>
+					<select name="filters-sorting" id="filters-sorting">
+						<option value="by-popularity">по популярности</option>
+						<option value="first-cheap">сначала недорогие</option>
+						<option value="first-expensive">сначала дорогие</option>
+						<option value="by-fat">по жирности</option>
+					</select>
 				</fieldset>
 				<fieldset>
 					<legend>
