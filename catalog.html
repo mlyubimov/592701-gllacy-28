@@ -9,7 +9,7 @@
 	<header>
 		<h1>GllacyShop</h1>
 		<a href="index.html">
-			<img src="img/svg/Logo.svg" width="154" height="64" alt="Gllacy Shop">
+			<img src="img/svg/logo.svg" width="154" height="64" alt="Gllacy Shop">
 		</a>
 
 		<ul>
@@ -42,8 +42,7 @@
 			</li>
 		</ul>
 
-		<section>
-			<img src="img/svg/Search.svg" width="16" height="16" alt="Поиск">
+		<section>>
 			<h2>Поиск</h2>
 			<label>
 				<input type="search" placeholder="Что ищем?">
@@ -51,7 +50,6 @@
 		</section>
 
 		<section>
-			<img src="img/svg/Entrance.svg" width="20" height="19" alt="Вход">
 			<h2>Вход</h2>
 			<div>
 				<!-- Форма входа -->
@@ -67,32 +65,27 @@
 		</section>
 
 		<section>
-			<img src="img/svg/Basket-full.svg" width="21" height="20" alt="Корзина">
 			<h2>Корзина:</h2>
 			<p>2 товара</p>
 			<section>
 				<h3>Выбранные товары:</h3>
 				<div>
-					<button>
-						<img src="img/svg/Cross-small.svg" width="11" height="11" alt="Удалить из корзины">
-					</button>
-					<img src="img/Ice-orange-min.jpg" width="33" height="33" alt="Изображение пломбира с апельсиновой стружкой">
+					<button type="reset" aria-label="Удалить товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
+					<img src="img/ice-orange-min.jpg" width="33" height="33" alt="Изображение пломбира с апельсиновой стружкой">
 					<p>Пломбир с апельсиновой стружкой</p>
 					<p>1,5 кг x <span>200 руб.</span></p>
 					<p>300 руб.</p>
 				</div>
 				<div>
-					<button>
-						<img src="img/svg/Cross-small.svg" width="11" height="11" alt="Удалить из корзины">
-					</button>
-					<img src="img/Ice-strawberry-min.jpg" width="33" height="33" alt="Изображение клубничного пломбира с присыпкой из белого шоколада">
+					<button type="reset" aria-label="Удалить товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
+					<img src="img/ice-strawberry-min.jpg" width="33" height="33" alt="Изображение клубничного пломбира с присыпкой из белого шоколада">
 					<p>Клубничный пломбир с присыпкой из белого шоколада</p>
 					<p>1,5 кг x <span>300 руб.</span></p>
 					<p>450 руб.</p>
 				</div>
 				<hr>
 				<p>Итого: 750 руб.</p>
-				<button>Оформить заказ</button>
+				<button type="submit">Оформить заказ</button>
 			</section>
 		</section>
 
@@ -143,10 +136,10 @@
 					<div>
 						<div></div> <!-- прямая между min и max -->
 						<div> <!-- toggle min -->
-							<img src="img/svg/Filter-button.svg" alt="Тумблер для выбора минимальной цены">
+							<img src="img/svg/filter-button.svg" alt="Тумблер для выбора минимальной цены">
 						</div>
 						<div> <!-- toggle max -->
-							<img src="img/svg/Filter-button.svg" alt="Тумблер для выбора максимальной цены">
+							<img src="img/svg/filter-button.svg" alt="Тумблер для выбора максимальной цены">
 						</div>
 					</div>
 				</fieldset>
@@ -196,32 +189,32 @@
 						</li>
 					</ul>
 				</fieldset>
-				<button>Применить</button>
+				<button type="submit">Применить</button>
 			</section>
 
 			<ul>
 				<li>
 					<article>
-						<img src="img/Ice-orange.jpg" width="267" height="267" alt="Изображение сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
+						<img src="img/ice-orange.jpg" width="267" height="267" alt="Изображение сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
 						<p>310 ₽<span>/кг</span></p>
 						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-chocolate.jpg" width="267" height="267" alt="Изображение сливочно-кофейного мороженого с кусочками шоколада">
+						<img src="img/ice-chocolate.jpg" width="267" height="267" alt="Изображение сливочно-кофейного мороженого с кусочками шоколада">
 						<p>380 ₽<span>/кг</span></p>
 						<h3>Сливочно-кофейное с кусочками шоколада</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-strawberry.jpg" width="267" height="267" alt=" Изображение сливочно-клубничного мороженого с присыпкой из белого шоколада">
+						<img src="img/ice-strawberry.jpg" width="267" height="267" alt=" Изображение сливочно-клубничного мороженого с присыпкой из белого шоколада">
 						<p>355 ₽<span>/кг</span></p>
 						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
@@ -229,71 +222,71 @@
 						<img src="img/Ice-creme-brulee.jpg" width="267" height="267" alt="Изображение сливочного мороженого крем-брюле с карамельной подливкой">
 						<p>415 ₽<span>/кг</span></p>
 						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-lingonberry.jpg" width="267" height="267" alt="Изображение сливочного мороженого с брусничным джемом">
+						<img src="img/ice-lingonberry.jpg" width="267" height="267" alt="Изображение сливочного мороженого с брусничным джемом">
 						<p>325 ₽<span>/кг</span></p>
 						<h3>Сливочное с брусничным джемом</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-blueberries.jpg" width="267" height="267" alt="Изображение сливочно-черничного мороженого с цельными ягодами черники">
+						<img src="img/ice-blueberries.jpg" width="267" height="267" alt="Изображение сливочно-черничного мороженого с цельными ягодами черники">
 						<p>410 ₽<span>/кг</span></p>
 						<h3>Сливочно-черничное с цельными ягодами черники</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-lemon.jpg" width="267" height="267" alt="Изображение сливочно-лимонного мороженого с карамельной присыпкой">
+						<img src="img/ice-lemon.jpg" width="267" height="267" alt="Изображение сливочно-лимонного мороженого с карамельной присыпкой">
 						<p>315 ₽<span>/кг</span></p>
 						<h3>Сливочно-лимонное с карамельной присыпкой</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-chocolate-chip.jpg" width="267" height="267" alt="Изображение сливочного мороженого с шоколадной стружкой">
+						<img src="img/ice-chocolate-chip.jpg" width="267" height="267" alt="Изображение сливочного мороженого с шоколадной стружкой">
 						<p>320 ₽<span>/кг</span></p>
 						<h3>Сливочное с шоколадной стружкой</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-vanilla.jpg" width="267" height="267" alt="Изображение сливочно-ванильного мороженого с кусочками шоколада">
+						<img src="img/ice-vanilla.jpg" width="267" height="267" alt="Изображение сливочно-ванильного мороженого с кусочками шоколада">
 						<p>440 ₽<span>/кг</span></p>
 						<h3>Сливочно-ванильное с кусочками шоколада</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-menthol.jpg" width="267" height="267" alt="Изображение сливочного мороженого с ментоловым сиропом">
+						<img src="img/ice-menthol.jpg" width="267" height="267" alt="Изображение сливочного мороженого с ментоловым сиропом">
 						<p>435 ₽<span>/кг</span></p>
 						<h3>Сливочное с ментоловым сиропом</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-dark-chocolate.jpg" width="267" height="267" alt="Изображение сливочного мороженого с кусочками черного шоколада">
+						<img src="img/ice-dark-chocolate.jpg" width="267" height="267" alt="Изображение сливочного мороженого с кусочками черного шоколада">
 						<p>355 ₽<span>/кг</span></p>
 						<h3>Сливочное с кусочками черного шоколада</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-mint.jpg" width="267" height="267" alt="Изображение сливочного мороженого с мятным сиропом">
+						<img src="img/ice-mint.jpg" width="267" height="267" alt="Изображение сливочного мороженого с мятным сиропом">
 						<p>420 ₽<span>/кг</span></p>
 						<h3>Сливочное с мятным сиропом</h3>
-						<button>Быстрый просмотр</button>
+						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 			</ul>
@@ -302,9 +295,7 @@
 		<div>
 			<ul>
 				<li>
-					<a href="#" aria-label="Назад" title="На предыдущую страницу">
-						<img src="img/svg/Icon-right-small.svg" width="7" height="12" alt="Назад">
-					</a>
+					<a href="#" aria-label="Назад" title="На предыдущую страницу"><!-- Реализовать наполнение через ::before content --></a>
 				</li>
 				<li>
 					<a>1</a>
@@ -322,9 +313,7 @@
 					<a href="#">5</a>
 				</li>
 				<li>
-					<a href="#" aria-label="Вперёд" title="На следующую страницу">
-						<img src="img/svg/Icon-right-small.svg" width="7" height="12" alt="Вперёд">
-					</a>
+					<a href="#" aria-label="Вперёд" title="На следующую страницу"><!-- Реализовать наполнение через ::before content --></a>
 				</li>
 			</ul>
 		</div>
@@ -337,25 +326,25 @@
 				<li>
 					<a href="https://www.facebook.com/htmlacademy">
 						<span>Наша группа в Facebook</span>
-						<img src="img/svg/Facebook.svg" width="32" height="32" alt="Facebook">
+						<img src="img/svg/facebook.svg" width="32" height="32" alt="Facebook">
 					</a>
 				</li>
 				<li>
 					<a href="https://vk.com/htmlacademy">
 						<span>Наша группа ВКонтакте</span>
-						<img src="img/svg/VK.svg" width="32" height="32" alt="Вконтакте">
+						<img src="img/svg/vk.svg" width="32" height="32" alt="Вконтакте">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.instagram.com/htmlacademy/">
 						<span>Наша страница в Instagram</span>
-						<img src="img/svg/Instagram.svg" width="32" height="32" alt="Instagram">
+						<img src="img/svg/instagram.svg" width="32" height="32" alt="Instagram">
 					</a>
 				</li>
 				<li>
 					<a href="https://twitter.com/htmlacademy_ru">
 						<span>Наша страница в Twitter</span>
-						<img src="img/svg/Twitter.svg" width="32" height="32" alt="Twitter">
+						<img src="img/svg/twitter.svg" width="32" height="32" alt="Twitter">
 					</a>
 				</li>
 			</ul>
@@ -363,7 +352,6 @@
 
 		<ul>
 			<li>
-				<img src="img/svg/Heart.svg" width="15" height="13" alt="Сердечко">
 				<a href="#">Для поставщиков</a>
 			</li>
 			<li>
@@ -379,7 +367,7 @@
 
 		<div>
 			<a href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/svg/Logo-academy.svg" width="108" height="39" alt="HTML Academy">
+				<img src="img/svg/logo-academy.svg" width="108" height="39" alt="HTML Academy">
 			</a>
 			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
 		</div>
