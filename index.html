@@ -7,7 +7,7 @@
 <body>
 
 	<header>
-		<h1>GllacyShop</h1>
+		<h1 class="visually-hidden">GllacyShop</h1>
 		<img src="img/svg/Logo.svg" width="154" height="64" alt="Gllacy Shop">
 
 		<ul>
@@ -41,46 +41,57 @@
 		</ul>
 
 		<section>
-			<h2>Поиск</h2>
+			<h2 class="visually-hidden">Поиск</h2>
 			<label>
-				<input type="search" placeholder="Что ищем?">
+				<input type="search" placeholder="Что ищем?" aria-label="Поле поиска товара" title="Введите запрос для поиска" autocomplete="on">
 			</label>
 		</section>
 
 		<section>
-			<h2>Вход</h2>
-			<div>
-				<!-- Форма входа -->
-				<ul>
-					<li>
-						<a href="#">Забыли пароль?</a>
-					</li>
-					<li>
-						<a href="#">Новая регистрация</a>
-					</li>
-				</ul>
-			</div>
+			<h2 class="visually-hidden">Личный кабинет</h2>
+			<p>Вход</p>
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label class="visually-hidden" for="login-email">E-mail: </label>
+					<input id="login-email" type="email" name="login-email" placeholder="Электронная почта" title="Введите вашу электронную почты" autocomplete="on" required>
+				</p>
+				<p>
+					<label class="visually-hidden" for="login-password">Пароль: </label>
+					<input id="login-password" type="password" name="login-password" placeholder="Пароль" title="Введите ваш пароль" autocomplete="on" required>
+				</p>
+				<div>
+					<button type="submit" title="Нажмите кнопку для входа в Личный кабинет">Войти</button>
+					<ul>
+						<li>
+							<a href="#">Забыли пароль?</a>
+						</li>
+						<li>
+							<a href="#">Новая регистрация</a>
+						</li>
+					</ul>
+				</div>
+			</form>
 		</section>
 
 		<section>
-			<h2>Корзина:</h2>
+			<h2 class="visually-hidden">Корзина:</h2>
 			<p>Пусто</p>
 		</section>
 
 		<p>с <time datetime="10:00">10</time> до <time datetime="20:00">20</time>, ежедневно</p>
-		<a href="tel:88124502525">8 812 450-25-25</a>
+		<a href="tel:88124502525" aria-label="Телефон для связи: 8 812 450-25-25">8 812 450-25-25</a>
 	</header>
 
 	<main>
 		<section>
-			<h2>Промо заказ</h2>
+			<h2 class="visually-hidden">Промо заказ</h2>
 			<div>
-				<input type="radio" id="promo1" name="switch" checked>
-				<input type="radio" id="promo2" name="switch">
-				<input type="radio" id="promo3" name="switch">
-				<label for="promo1" title="Первый промо заказ"></label>
-				<label for="promo2" title="Второй промо заказ"></label>
-				<label for="promo3" title="Третий промо заказ"></label>
+				<input class="visually-hidden" type="radio" id="promo1" name="switch" checked>
+				<input class="visually-hidden" type="radio" id="promo2" name="switch">
+				<input class="visually-hidden" type="radio" id="promo3" name="switch">
+				<label for="promo1" aria-label="Первый промо заказ"></label>
+				<label for="promo2" aria-label="Второй промо заказ"></label>
+				<label for="promo3" aria-label="Третий промо заказ"></label>
 			</div>
 			<ul>
 				<li>
@@ -99,7 +110,7 @@
 		</section>
 
 		<section>
-			<h2>Специальные предложения</h2>
+			<h2 class="visually-hidden">Специальные предложения</h2>
 			<ul>
 				<li>
 					<h3>Малина даром!</h3>
@@ -115,13 +126,13 @@
 		</section>
 		
 		<section>
-			<h2>Хиты продаж</h2>
+			<h2 class="visually-hidden">Хиты продаж</h2>
 			<ul>
 				<li>
 					<article>
 						<img src="img/hit.png" width="61" height="61" alt="Хит">
 						<img src="img/ice-orange.jpg" width="267" height="267" alt="Изображение сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
-						<p>310 ₽<span>/кг</span></p>
+						<p>310 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -130,7 +141,7 @@
 					<article>
 						<img src="img/hit.png" width="61" height="61" alt="Хит">
 						<img src="img/ice-chocolate.jpg" width="267" height="267" alt="Изображение сливочно-кофейного мороженого с кусочками шоколада">
-						<p>380 ₽<span>/кг</span></p>
+						<p>380 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-кофейное с кусочками шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -139,7 +150,7 @@
 					<article>
 						<img src="img/hit.png" width="61" height="61" alt="Хит">
 						<img src="img/ice-strawberry.jpg" width="267" height="267" alt="Изображение сливочно-клубничного мороженого с присыпкой из белого шоколада">
-						<p>355 ₽<span>/кг</span></p>
+						<p>355 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -148,7 +159,7 @@
 					<article>
 						<img src="img/hit.png" width="61" height="61" alt="Хит">
 						<img src="img/ice-creme-brulee.jpg" width="267" height="267" alt="Изображение сливочного мороженого крем-брюле с карамельной подливкой">
-						<p>415 ₽<span>/кг</span></p>
+						<p>415 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -175,19 +186,25 @@
 		</section>
 
 		<article>
-			<h2>Блог</h2>
+			<h2 class="visually-hidden">Блог</h2>
 			<p>Новое в нашем блоге</p>
 			<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
 		</article>
 
 		<section>
-			<h2>Подпишись на рассылку!</h2>
+			<h2 class="visually-hidden">Подпишись на рассылку!</h2>
 			<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-			<!-- Форма для подписки на рассылку -->
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label for="subscription-email" class="visually-hidden">Электронная почта</label>
+					<input id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта" required title="Введите ваш адрес электронной почты" autocomplete="on">
+				</p>
+				<button class="btn subscription-btn" type="submit" title="Нажмите кнопку Отправить, чтобы оформить подписку">Отправить</button>
+			</form>
 		</section>
 
 		<section>
-			<h2>Контакты и обратная связь</h2>
+			<h2 class="visually-hidden">Контакты и обратная связь</h2>
 			<div>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.32085871625477!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590145370531!5m2!1sru!2sru" width="1200" height="430" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				<address>
@@ -196,7 +213,7 @@
 					<p>Для заказов по телефону:</p>
 					<a href="tel:88124502525">8 812 450-25-25</a>
 					<p>(с <time datetime="10:00">10</time> до <time datetime="20:00">20</time>, ежедневно)</p>
-					<button type="button" aria-label="Открыть форму обратной связи">Форма обратной связи</button>
+					<button type="button">Форма обратной связи</button>
 				</address>
 			</div>
 		</section>
@@ -204,29 +221,29 @@
 
 	<footer>
 		<section>
-			<h2>Свяжись с нами!</h2>
+			<h2 class="visually-hidden">Свяжись с нами!</h2>
 			<ul>
 				<li>
 					<a href="https://www.facebook.com/htmlacademy">
-						<span>Наша группа в Facebook</span>
+						<span class="visually-hidden">Наша группа в Facebook</span>
 						<img src="img/svg/facebook.svg" width="32" height="32" alt="Иконка Facebook">
 					</a>
 				</li>
 				<li>
 					<a href="https://vk.com/htmlacademy">
-						<span>Наша группа ВКонтакте</span>
+						<span class="visually-hidden">Наша группа ВКонтакте</span>
 						<img src="img/svg/vk.svg" width="32" height="32" alt="Иконка Вконтакте">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.instagram.com/htmlacademy/">
-						<span>Наша страница в Instagram</span>
+						<span class="visually-hidden">Наша страница в Instagram</span>
 						<img src="img/svg/instagram.svg" width="32" height="32" alt="Иконка Instagram">
 					</a>
 				</li>
 				<li>
 					<a href="https://twitter.com/htmlacademy_ru">
-						<span>Наша страница в Twitter</span>
+						<span class="visually-hidden">Наша страница в Twitter</span>
 						<img src="img/svg/twitter.svg" width="32" height="32" alt="Иконка Twitter">
 					</a>
 				</li>
@@ -257,9 +274,24 @@
 	</footer>
 
 	<section>
-		<h2>Мы обязательно вам ответим!</h2>
+		<h2 class="visually-hidden">Форма обратной связи</h2>
+		<p>Мы обязательно вам ответим!</p>
 		<button type="button" aria-label="Закрыть форму обратной связи"><!-- Реализовать наполнение через ::before content --></button>
-		<!-- Форма модального окна -->
+		<form action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="visually-hidden" for="user-name">Ваше имя: </label>
+				<input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?" title="Введите ваше имя" autocomplete="on" required>
+			</p>
+			<p>
+				<label class="visually-hidden" for="feedback-email">E-mail: </label>
+				<input type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" title="Введите ваш E-mail" autocomplete="on" required>
+			</p>
+			<p>
+				<label class="visually-hidden" for="feedback-text">Ваше сообщение: </label>
+				<textarea name="feedback-text" id="feedback-text" placeholder="О чём вы хотите нам написать?" rows="1" cols="45" title="Введите ваше сообщение" required></textarea>
+			</p>
+			<button class="btn feedback-btn" type="submit" title="Нажмите кнопку Отправить, чтобы послать сообщение">Отправить</button>
+		</form>
 	</section>
 
 </body>

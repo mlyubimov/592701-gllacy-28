@@ -7,7 +7,7 @@
 <body>
 
 	<header>
-		<h1>GllacyShop</h1>
+		<h1 class="visually-hidden">GllacyShop</h1>
 		<a href="index.html">
 			<img src="img/svg/logo.svg" width="154" height="64" alt="Gllacy Shop">
 		</a>
@@ -42,42 +42,53 @@
 			</li>
 		</ul>
 
-		<section>>
-			<h2>Поиск</h2>
+		<section>
+			<h2 class="visually-hidden">Поиск</h2>
 			<label>
-				<input type="search" placeholder="Что ищем?">
+				<input type="search" placeholder="Что ищем?" aria-label="Поле поиска товара" title="Введите запрос для поиска" autocomplete="on">
 			</label>
 		</section>
 
 		<section>
-			<h2>Вход</h2>
-			<div>
-				<!-- Форма входа -->
-				<ul>
-					<li>
-						<a href="#">Забыли пароль?</a>
-					</li>
-					<li>
-						<a href="#">Новая регистрация</a>
-					</li>
-				</ul>
-			</div>
+			<h2 class="visually-hidden">Личный кабинет</h2>
+			<p>Вход</p>
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label class="visually-hidden" for="login-email">E-mail: </label>
+					<input type="email" name="login-email" id="login-email" placeholder="Электронная почта" title="Введите вашу электронную почты" autocomplete="on" required>
+				</p>
+				<p>
+					<label class="visually-hidden" for="login-password">Пароль: </label>
+					<input type="password" name="login-password" id="login-password" placeholder="Пароль" title="Введите ваш пароль" autocomplete="on" required>
+				</p>
+				<div>
+					<button type="submit" title="Нажмите кнопку для входа в Личный кабинет">Войти</button>
+					<ul>
+						<li>
+							<a href="#">Забыли пароль?</a>
+						</li>
+						<li>
+							<a href="#">Новая регистрация</a>
+						</li>
+					</ul>
+				</div>
+			</form>
 		</section>
 
 		<section>
-			<h2>Корзина:</h2>
+			<h2 class="visually-hidden">Корзина:</h2>
 			<p>2 товара</p>
 			<section>
 				<h3>Выбранные товары:</h3>
 				<div>
-					<button type="reset" aria-label="Удалить товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
+					<button type="reset" aria-label="Удалить первый товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
 					<img src="img/ice-orange-min.jpg" width="33" height="33" alt="Изображение пломбира с апельсиновой стружкой">
 					<p>Пломбир с апельсиновой стружкой</p>
 					<p>1,5 кг x <span>200 руб.</span></p>
 					<p>300 руб.</p>
 				</div>
 				<div>
-					<button type="reset" aria-label="Удалить товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
+					<button type="reset" aria-label="Удалить второй ь товар из корзины"><!-- Реализовать наполнение через ::before content --></button>
 					<img src="img/ice-strawberry-min.jpg" width="33" height="33" alt="Изображение клубничного пломбира с присыпкой из белого шоколада">
 					<p>Клубничный пломбир с присыпкой из белого шоколада</p>
 					<p>1,5 кг x <span>300 руб.</span></p>
@@ -90,7 +101,7 @@
 		</section>
 
 		<p>с <time datetime="10:00">10</time> до <time datetime="20:00">20</time>, ежедневно</p>
-		<a href="tel:88124502525">8 812 450-25-25</a>
+		<a href="tel:88124502525" aria-label="Телефон для связи: 8 812 450-25-25">8 812 450-25-25</a>
 	</header>
 
 	<main>
@@ -110,93 +121,95 @@
 			<h2>Сливочное мороженое</h2>
 
 			<section>
-				<h3>Фильтры товаров</h3>
-				<fieldset>
-					<legend>Сортировка:</legend>
-					<label for="filters-sorting">Сортировка:</label>
-					<select name="filters-sorting" id="filters-sorting">
-						<option value="by-popularity">по популярности</option>
-						<option value="first-cheap">сначала недорогие</option>
-						<option value="first-expensive">сначала дорогие</option>
-						<option value="by-fat">по жирности</option>
-					</select>
-				</fieldset>
-				<fieldset>
-					<legend>
-						Цена:
-						<label>
-							<input type="text" name="filters-minprice" value="100">
-						</label>
-						&#8381; &ndash;
-						<label>
-							<input type="text" name="filters-maxprice" value="500">
-						</label>
-						&#8381;
-					</legend>
-					<div>
-						<div></div> <!-- прямая между min и max -->
-						<div> <!-- toggle min -->
-							<img src="img/svg/filter-button.svg" alt="Тумблер для выбора минимальной цены">
+				<h3 class="visually-hidden">Фильтры товаров</h3>
+				<form action="https://echo.htmlacademy.ru" method="post">
+					<fieldset>
+						<legend>Сортировка:</legend>
+						<label class="visually-hidden" for="filters-sorting">Сортировка:</label>
+						<select name="filters-sorting" id="filters-sorting">
+							<option value="by-popularity">по популярности</option>
+							<option value="first-cheap">сначала недорогие</option>
+							<option value="first-expensive">сначала дорогие</option>
+							<option value="by-fat">по жирности</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>
+							Цена:
+							<label>
+								<input type="text" name="filters-minprice" value="100">
+							</label>
+							&#8381; &ndash;
+							<label>
+								<input type="text" name="filters-maxprice" value="500">
+							</label>
+							&#8381;
+						</legend>
+						<div>
+							<div></div> <!-- прямая между min и max -->
+							<div>
+								<img src="img/svg/filter-button.svg" alt="Тумблер для выбора минимальной цены">
+							</div>
+							<div>
+								<img src="img/svg/filter-button.svg" alt="Тумблер для выбора максимальной цены">
+							</div>
 						</div>
-						<div> <!-- toggle max -->
-							<img src="img/svg/filter-button.svg" alt="Тумблер для выбора максимальной цены">
-						</div>
-					</div>
-				</fieldset>
-				<fieldset>
-					<legend>Жирность:</legend>
-					<ul>
-						<li>
-							<input id="filters-0-percent" type="radio" name="filters-fat">
-							<label for="filters-0-percent">0 &percnt;</label>
-						</li>
-						<li>
-							<input id="filters-before-10-percent" type="radio" name="filters-fat" value="up to 10" checked>
-							<label for="filters-before-10-percent">до 10 &percnt;</label>
-						</li>
-						<li>
-							<input id="filters-before-30-percent" type="radio" name="filters-fat" value="up to 30">
-							<label for="filters-before-30-percent">до 30 &percnt;</label>
-						</li>
-						<li>
-							<input id="filters-more-30-percent" type="radio" name="filters-fat" value="above 10">
-							<label for="filters-more-30-percent">больше 30 &percnt;</label>
-						</li>
-					</ul>
-				</fieldset>
-				<fieldset>
-					<legend>Наполнители:</legend>
-					<ul>
-						<li>
-							<input id="filters-chocolate" type="checkbox" name="filters-chocolate" checked>
-							<label for="filters-chocolate">шоколадные</label>
-						</li>
-						<li>
-							<input id="filters-sugar" type="checkbox" name="filters-sugar" checked>
-							<label for="filters-sugar">сахарная присыпка</label>
-						</li>
-						<li>
-							<input id="filters-fruits" type="checkbox" name="filters-fruits">
-							<label for="filters-fruits">фрукты</label>
-						</li>
-						<li>
-							<input id="filters-syrups" type="checkbox" name="filters-fruits">
-							<label for="filters-syrups">сиропы</label>
-						</li>
-						<li>
-							<input id="filters-jams" type="checkbox" name="filters-fruits">
-							<label for="filters-jams">джемы</label>
-						</li>
-					</ul>
-				</fieldset>
-				<button type="submit">Применить</button>
+					</fieldset>
+					<fieldset>
+						<legend>Жирность:</legend>
+						<ul>
+							<li>
+								<input class="visually-hidden" id="filters-0-percent" type="radio" name="filters-fat">
+								<label for="filters-0-percent">0 &percnt;</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-before-10-percent" type="radio" name="filters-fat" value="up to 10" checked>
+								<label for="filters-before-10-percent">до 10 &percnt;</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-before-30-percent" type="radio" name="filters-fat" value="up to 30">
+								<label for="filters-before-30-percent">до 30 &percnt;</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-more-30-percent" type="radio" name="filters-fat" value="above 30">
+								<label for="filters-more-30-percent">больше 30 &percnt;</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Наполнители:</legend>
+						<ul>
+							<li>
+								<input class="visually-hidden" id="filters-chocolate" type="checkbox" name="filters-chocolate" checked>
+								<label for="filters-chocolate">Шоколадные</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-sugar" type="checkbox" name="filters-sugar" checked>
+								<label for="filters-sugar">Сахарная присыпка</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-fruits" type="checkbox" name="filters-fruits">
+								<label for="filters-fruits">Фрукты</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-syrups" type="checkbox" name="filters-syrups">
+								<label for="filters-syrups">Сиропы</label>
+							</li>
+							<li>
+								<input class="visually-hidden" id="filters-jams" type="checkbox" name="filters-jams">
+								<label for="filters-jams">Джемы</label>
+							</li>
+						</ul>
+					</fieldset>
+					<button type="submit">Применить</button>
+				</form>
 			</section>
 
 			<ul>
 				<li>
 					<article>
 						<img src="img/ice-orange.jpg" width="267" height="267" alt="Изображение сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
-						<p>310 ₽<span>/кг</span></p>
+						<p>310 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -204,7 +217,7 @@
 				<li>
 					<article>
 						<img src="img/ice-chocolate.jpg" width="267" height="267" alt="Изображение сливочно-кофейного мороженого с кусочками шоколада">
-						<p>380 ₽<span>/кг</span></p>
+						<p>380 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-кофейное с кусочками шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -212,15 +225,15 @@
 				<li>
 					<article>
 						<img src="img/ice-strawberry.jpg" width="267" height="267" alt=" Изображение сливочно-клубничного мороженого с присыпкой из белого шоколада">
-						<p>355 ₽<span>/кг</span></p>
+						<p>355 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
 				</li>
 				<li>
 					<article>
-						<img src="img/Ice-creme-brulee.jpg" width="267" height="267" alt="Изображение сливочного мороженого крем-брюле с карамельной подливкой">
-						<p>415 ₽<span>/кг</span></p>
+						<img src="img/ice-creme-brulee.jpg" width="267" height="267" alt="Изображение сливочного мороженого крем-брюле с карамельной подливкой">
+						<p>415 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное крем-брюле с карамельной подливкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -228,7 +241,7 @@
 				<li>
 					<article>
 						<img src="img/ice-lingonberry.jpg" width="267" height="267" alt="Изображение сливочного мороженого с брусничным джемом">
-						<p>325 ₽<span>/кг</span></p>
+						<p>325 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с брусничным джемом</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -236,7 +249,7 @@
 				<li>
 					<article>
 						<img src="img/ice-blueberries.jpg" width="267" height="267" alt="Изображение сливочно-черничного мороженого с цельными ягодами черники">
-						<p>410 ₽<span>/кг</span></p>
+						<p>410 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-черничное с цельными ягодами черники</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -244,7 +257,7 @@
 				<li>
 					<article>
 						<img src="img/ice-lemon.jpg" width="267" height="267" alt="Изображение сливочно-лимонного мороженого с карамельной присыпкой">
-						<p>315 ₽<span>/кг</span></p>
+						<p>315 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-лимонное с карамельной присыпкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -252,7 +265,7 @@
 				<li>
 					<article>
 						<img src="img/ice-chocolate-chip.jpg" width="267" height="267" alt="Изображение сливочного мороженого с шоколадной стружкой">
-						<p>320 ₽<span>/кг</span></p>
+						<p>320 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с шоколадной стружкой</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -260,7 +273,7 @@
 				<li>
 					<article>
 						<img src="img/ice-vanilla.jpg" width="267" height="267" alt="Изображение сливочно-ванильного мороженого с кусочками шоколада">
-						<p>440 ₽<span>/кг</span></p>
+						<p>440 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочно-ванильное с кусочками шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -268,7 +281,7 @@
 				<li>
 					<article>
 						<img src="img/ice-menthol.jpg" width="267" height="267" alt="Изображение сливочного мороженого с ментоловым сиропом">
-						<p>435 ₽<span>/кг</span></p>
+						<p>435 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с ментоловым сиропом</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -276,7 +289,7 @@
 				<li>
 					<article>
 						<img src="img/ice-dark-chocolate.jpg" width="267" height="267" alt="Изображение сливочного мороженого с кусочками черного шоколада">
-						<p>355 ₽<span>/кг</span></p>
+						<p>355 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с кусочками черного шоколада</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -284,7 +297,7 @@
 				<li>
 					<article>
 						<img src="img/ice-mint.jpg" width="267" height="267" alt="Изображение сливочного мороженого с мятным сиропом">
-						<p>420 ₽<span>/кг</span></p>
+						<p>420 &#8381;<span>&sol;кг</span></p>
 						<h3>Сливочное с мятным сиропом</h3>
 						<button type="button">Быстрый просмотр</button>
 					</article>
@@ -295,7 +308,7 @@
 		<div>
 			<ul>
 				<li>
-					<a href="#" aria-label="Назад" title="На предыдущую страницу"><!-- Реализовать наполнение через ::before content --></a>
+					<a href="#" aria-label="Предыдущая страница" title="На предыдущую страницу"><!-- Реализовать наполнение через ::before content --></a>
 				</li>
 				<li>
 					<a>1</a>
@@ -313,7 +326,7 @@
 					<a href="#">5</a>
 				</li>
 				<li>
-					<a href="#" aria-label="Вперёд" title="На следующую страницу"><!-- Реализовать наполнение через ::before content --></a>
+					<a href="#" aria-label="Следующая страница" title="На следующую страницу"><!-- Реализовать наполнение через ::before content --></a>
 				</li>
 			</ul>
 		</div>
@@ -321,30 +334,30 @@
 
 	<footer>
 		<section>
-			<h2>Свяжись с нами!</h2>
+			<h2 class="visually-hidden">Свяжись с нами!</h2>
 			<ul>
 				<li>
 					<a href="https://www.facebook.com/htmlacademy">
-						<span>Наша группа в Facebook</span>
-						<img src="img/svg/facebook.svg" width="32" height="32" alt="Facebook">
+						<span class="visually-hidden">Наша группа в Facebook</span>
+						<img src="img/svg/facebook.svg" width="32" height="32" alt="Иконка Facebook">
 					</a>
 				</li>
 				<li>
 					<a href="https://vk.com/htmlacademy">
-						<span>Наша группа ВКонтакте</span>
-						<img src="img/svg/vk.svg" width="32" height="32" alt="Вконтакте">
+						<span class="visually-hidden">Наша группа ВКонтакте</span>
+						<img src="img/svg/vk.svg" width="32" height="32" alt="Иконка Вконтакте">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.instagram.com/htmlacademy/">
-						<span>Наша страница в Instagram</span>
-						<img src="img/svg/instagram.svg" width="32" height="32" alt="Instagram">
+						<span class="visually-hidden">Наша страница в Instagram</span>
+						<img src="img/svg/instagram.svg" width="32" height="32" alt="Иконка Instagram">
 					</a>
 				</li>
 				<li>
 					<a href="https://twitter.com/htmlacademy_ru">
-						<span>Наша страница в Twitter</span>
-						<img src="img/svg/twitter.svg" width="32" height="32" alt="Twitter">
+						<span class="visually-hidden">Наша страница в Twitter</span>
+						<img src="img/svg/twitter.svg" width="32" height="32" alt="Иконка Twitter">
 					</a>
 				</li>
 			</ul>
@@ -367,7 +380,7 @@
 
 		<div>
 			<a href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/svg/logo-academy.svg" width="108" height="39" alt="HTML Academy">
+				<img src="img/svg/logo-academy.svg" width="108" height="39" alt="Логотип HTML Academy">
 			</a>
 			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
 		</div>
