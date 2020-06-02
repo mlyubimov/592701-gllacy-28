@@ -3,175 +3,190 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Форма обратной связи | HTML Academy: Глейси</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="body">
+	<div class="site-wrapper">
+		<header class="header">
+			<nav class="navigation">
+				<div class="navigation-container">
+					<h1 class="visually-hidden">GllacyShop</h1>
+					<a href="index.html">
+						<img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Gllacy Shop">
+					</a>
 
-	<header>
-		<nav>
-			<h1 class="visually-hidden">GllacyShop</h1>
-			<a href="index.html">
-				<img src="img/svg/logo.svg" width="154" height="64" alt="Gllacy Shop">
-			</a>
-
-			<ul>
-				<li>
-					<a href="#">Каталог</a>
-					<ul>
-						<li>
-							<a href="#">Новинки</a>
-							<hr>
+					<ul class="site-navigation">
+						<li id="site-navigation__item" class="site-navigation__item site-navigation__catalog">
+							<a id="site-navigation__catalog" href="#">Каталог</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Новинки</a>
+									<hr>
+								</li>
+								<li>
+									<a href="catalog.html">Сливочное</a>
+								</li>
+								<li>
+									<a href="#">Щербеты</a>
+								</li>
+								<li>
+									<a href="#">Фруктовый лёд</a>
+								</li>
+								<li>
+									<a href="#">Мелорин</a>
+								</li>
+							</ul>
 						</li>
-						<li>
-							<a href="catalog.html">Сливочное</a>
+						<li class="site-navigation__item">
+							<a href="#">Доставка и оплата</a>
 						</li>
-						<li>
-							<a href="#">Щербеты</a>
-						</li>
-						<li>
-							<a href="#">Фруктовый лёд</a>
-						</li>
-						<li>
-							<a href="#">Мелорин</a>
+						<li class="site-navigation__item">
+							<a href="#">О компании</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="#">Доставка и оплата</a>
-				</li>
-				<li>
-					<a href="#">О компании</a>
-				</li>
-			</ul>
+				</div>
 
-			<ul>
-				<li>
-					<a href="#" title="Поиск по сайту"></a>
-					<section>
-						<h2 class="visually-hidden">Поиск</h2>
-						<form action="https://echo.htmlacademy.ru" method="get">
-							<label>
-								<input type="search" placeholder="Что ищем?" name="site-search" title="Введите запрос для поиска" autocomplete="on">
-							</label>
-						</form>
-					</section>
-				</li>
-				<li>
-					<a href="#">Вход</a>
-					<section>
-						<h2 class="visually-hidden">Личный кабинет</h2>
-						<form action="https://echo.htmlacademy.ru" method="post">
+				<div class="navigation-container">
+					<ul class="user-navigation">
+						<li class="user-navigation__item user-navigation__search">
+							<a class="search" href="#" title="Поиск по сайту"></a>
+							<section class="search-section">
+								<h2 class="visually-hidden">Поиск</h2>
+								<form action="https://echo.htmlacademy.ru" method="get">
+									<label>
+										<input class="input" type="search" placeholder="Что ищем?" name="site-search" title="Введите запрос для поиска" autocomplete="on">
+									</label>
+								</form>
+							</section>
+						</li>
+						<li class="user-navigation__item user-navigation__entrance">
+							<a class="entrance" href="#">Вход</a>
+							<section class="entrance-section">
+								<h2 class="visually-hidden">Личный кабинет</h2>
+								<form action="https://echo.htmlacademy.ru" method="post">
+									<p>
+										<label class="visually-hidden" for="login-email">E-mail: </label>
+										<input class="input" id="login-email" type="email" name="login-email" placeholder="email@example.com" title="Введите вашу электронную почты" autocomplete="on" required>
+									</p>
+									<p>
+										<label class="visually-hidden" for="login-password">Пароль: </label>
+										<input class="input" id="login-password" type="password" name="login-password" placeholder="Пароль" title="Введите ваш пароль" autocomplete="on" required>
+									</p>
+									<div>
+										<button class="btn" type="submit">Войти</button>
+										<ul class="entrance-section__help">
+											<li>
+												<a href="#">Забыли пароль?</a>
+											</li>
+											<li>
+												<a href="#">Новая регистрация</a>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</section>
+						</li>
+						<li class="user-navigation__item user-navigation__basket">
+							<a class="basket" href="#" title="Корзина">Пусто</a>
+							<section class="basket-section">
+								<h2 class="visually-hidden">Корзина:</h2>
+								<p>Корзина пуста :c</p>
+								<a class="btn" href="catalog.html">За мороженым!</a>
+							</section>
+						</li>
+					</ul>
+					<div class="container-info">
+						<p>с <time datetime="10:00">10</time> до <time datetime="20:00">20</time>, ежедневно</p>
+						<a href="tel:88124502525" aria-label="Телефон для связи: 8 812 450-25-25">8 812 450-25-25</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main-feedback">
+			<div id="feedback-popup">
+				<div>
+					<section id="feedback-section" class="feedback">
+						<h2 class="visually-hidden">Форма обратной связи</h2>
+						<p>Мы обязательно вам ответим!</p>
+						<form class="feedback__form" name="feedback" action="https://echo.htmlacademy.ru" method="post">
 							<p>
-								<label class="visually-hidden" for="login-email">E-mail: </label>
-								<input id="login-email" type="email" name="login-email" placeholder="Электронная почта" title="Введите вашу электронную почты" autocomplete="on" required>
+								<label class="visually-hidden" for="user-name">Ваше имя: </label>
+								<input class="input" type="text" name="user-name" id="user-name" placeholder="Имя Фамилия" title="Введите ваше имя" autocomplete="on" required>
 							</p>
 							<p>
-								<label class="visually-hidden" for="login-password">Пароль: </label>
-								<input id="login-password" type="password" name="login-password" placeholder="Пароль" title="Введите ваш пароль" autocomplete="on" required>
+								<label class="visually-hidden" for="feedback-email">E-mail: </label>
+								<input class="input" type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com" title="Введите ваш E-mail" autocomplete="on" required>
 							</p>
-							<div>
-								<button type="submit">Войти</button>
-								<ul>
-									<li>
-										<a href="#">Забыли пароль?</a>
-									</li>
-									<li>
-										<a href="#">Новая регистрация</a>
-									</li>
-								</ul>
-							</div>
+							<p>
+								<label class="visually-hidden" for="feedback-text">Ваше сообщение: </label>
+								<textarea class="input" name="feedback-text" id="feedback-text" placeholder="В свободной форме" rows="1" cols="45" title="Введите ваше сообщение" required></textarea>
+							</p>
+							<button class="btn" type="submit" onclick="validateForm()">Отправить</button>
 						</form>
 					</section>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<section class="footer__social-container">
+				<h2 class="visually-hidden">Свяжись с нами!</h2>
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/htmlacademy">
+							<span class="visually-hidden">Наша группа в Facebook</span>
+							<img class="facebook-icon" src="img/svg/facebook.svg" width="36" height="36" alt="Иконка Facebook">
+						</a>
+					</li>
+					<li>
+						<a href="https://vk.com/htmlacademy">
+							<span class="visually-hidden">Наша группа ВКонтакте</span>
+							<img class="vk-icon" src="img/svg/vk.svg" width="36" height="36" alt="Иконка Вконтакте">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/htmlacademy/">
+							<span class="visually-hidden">Наша страница в Instagram</span>
+							<img class="instagram-icon" src="img/svg/instagram.svg" width="36" height="36" alt="Иконка Instagram">
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/htmlacademy_ru">
+							<span class="visually-hidden">Наша страница в Twitter</span>
+							<img class="twitter-icon" src="img/svg/twitter.svg" width="36" height="36" alt="Иконка Twitter">
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<ul class="footer__useful">
+				<li>
+					<a href="#">Для поставщиков</a>
 				</li>
 				<li>
-					<a href="#" title="Корзина">Пусто</a>
-					<section>
-						<h2 class="visually-hidden">Корзина:</h2>
-						<p>Здесь пока ничего нет</p>
-						<a href="catalog.html">За мороженым!</a>
-					</section>
+					<a href="#">Наши документы</a>
+				</li>
+				<li>
+					<a href="#">О производстве</a>
+				</li>
+				<li>
+					<a href="#">Экологические стандарты</a>
 				</li>
 			</ul>
-		</nav>
 
-		<p>с <time datetime="10:00">10</time> до <time datetime="20:00">20</time>, ежедневно</p>
-		<a href="tel:88124502525" aria-label="Телефон для связи: 8 812 450-25-25">8 812 450-25-25</a>
-	</header>
+			<div class="footer__copyright">
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/svg/logo-academy.svg" width="108" height="39" alt="Логотип HTML Academy">
+				</a>
+				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
+			</div>
+		</footer>
+	</div>
 
-	<main>
-		<section>
-			<h2 class="visually-hidden">Форма обратной связи</h2>
-			<p>Мы обязательно вам ответим!</p>
-			<form action="https://echo.htmlacademy.ru" method="post">
-				<p>
-					<label class="visually-hidden" for="user-name">Ваше имя: </label>
-					<input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?" title="Введите ваше имя" autocomplete="on" required>
-				</p>
-				<p>
-					<label class="visually-hidden" for="feedback-email">E-mail: </label>
-					<input type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" title="Введите ваш E-mail" autocomplete="on" required>
-				</p>
-				<p>
-					<label class="visually-hidden" for="feedback-text">Ваше сообщение: </label>
-					<textarea name="feedback-text" id="feedback-text" placeholder="О чём вы хотите нам написать?" rows="1" cols="45" title="Введите ваше сообщение" required></textarea>
-				</p>
-				<button type="submit">Отправить</button>
-			</form>
-		</section>
-	</main>
-
-	<footer>
-		<section>
-			<h2 class="visually-hidden">Свяжись с нами!</h2>
-			<ul>
-				<li>
-					<a href="https://www.facebook.com/htmlacademy">
-						<span class="visually-hidden">Наша группа в Facebook</span>
-						<img src="img/svg/facebook.svg" width="32" height="32" alt="Иконка Facebook">
-					</a>
-				</li>
-				<li>
-					<a href="https://vk.com/htmlacademy">
-						<span class="visually-hidden">Наша группа ВКонтакте</span>
-						<img src="img/svg/vk.svg" width="32" height="32" alt="Иконка Вконтакте">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com/htmlacademy/">
-						<span class="visually-hidden">Наша страница в Instagram</span>
-						<img src="img/svg/instagram.svg" width="32" height="32" alt="Иконка Instagram">
-					</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/htmlacademy_ru">
-						<span class="visually-hidden">Наша страница в Twitter</span>
-						<img src="img/svg/twitter.svg" width="32" height="32" alt="Иконка Twitter">
-					</a>
-				</li>
-			</ul>
-		</section>
-
-		<ul>
-			<li>
-				<a href="#">Для поставщиков</a>
-			</li>
-			<li>
-				<a href="#">О производстве</a>
-			</li>
-			<li>
-				<a href="#">Наши документы</a>
-			</li>
-			<li>
-				<a href="#">Экологические стандарты</a>
-			</li>
-		</ul>
-
-		<div>
-			<a href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/svg/logo-academy.svg" width="108" height="39" alt="Логотип HTML Academy">
-			</a>
-			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
-		</div>
-	</footer>
+	<script src="js/all.min.js"></script>
 
 </body>
 </html>
