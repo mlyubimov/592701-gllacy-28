@@ -2006,8 +2006,10 @@ a {
 }
 
 .basket-section hr {
-    margin-top: -4px;
-    color: var(--basket-hr);
+    height: 1px;
+    margin-top: -3px;
+    border: none;
+    background-color: var(--basket-hr);
 }
 
 .basket__result-container>p {
