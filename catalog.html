@@ -12,8 +12,8 @@
 		<header class="header">
 			<nav class="navigation">
 				<div class="navigation-container">
-					<h1 class="visually-hidden">GllacyShop</h1>
-					<a href="index.html">
+					<h2 class="visually-hidden">GllacyShop</h2>
+					<a href="index.html" aria-label="Перейти на главную страницу">
 						<img class="logo" src="img/svg/logo.svg" width="154" height="64" alt="Gllacy Shop">
 					</a>
 
@@ -62,13 +62,13 @@
 							</section>
 						</li>
 						<li class="user-navigation__item user-navigation__entrance">
-							<a class="entrance" href="#">Вход</a>
+							<a class="entrance" href="#" aria-label="Вход в личный кабинет">Вход</a>
 							<section class="entrance-section">
 								<h2 class="visually-hidden">Личный кабинет</h2>
 								<form action="https://echo.htmlacademy.ru" method="post">
 									<p>
 										<label class="visually-hidden" for="login-email">E-mail: </label>
-										<input class="input" id="login-email" type="email" name="login-email" placeholder="email@example.com" title="Введите вашу электронную почты" autocomplete="on" required>
+										<input class="input" id="login-email" type="email" name="login-email" placeholder="email@example.com" title="Введите вашу электронную почту" autocomplete="on" required>
 									</p>
 									<p>
 										<label class="visually-hidden" for="login-password">Пароль: </label>
@@ -78,7 +78,7 @@
 										<button class="btn" type="submit">Войти</button>
 										<ul class="entrance-section__help">
 											<li>
-												<a href="#">Забыли пароль?</a>
+												<a href="#" aria-label="Восстановить пароль">Забыли пароль?</a>
 											</li>
 											<li>
 												<a href="#">Новая регистрация</a>
@@ -140,7 +140,7 @@
 			</nav>
 
 			<section class="product-catalog">
-				<h2>Сливочное мороженое</h2>
+				<h1>Сливочное мороженое</h1>
 
 				<section class="filter">
 					<h3 class="visually-hidden">Фильтры товаров</h3>
@@ -161,18 +161,19 @@
 							<legend>
 								Цена:
 								<label class="filter-price__legend-label">
-									<input type="text" name="filters-minprice" value="100" contenteditable="true" aria-label="Минимальная цена для поиска">
+									<input type="text" name="filters-minprice" value="100" contenteditable="true" aria-label="Минимальная цена для поиска" tabindex="0">
 								</label>
 								&#8381; &ndash;<label class="filter-price__legend-label">
-									<input type="text" name="filters-maxprice" value="500" contenteditable="true" aria-label="Максимальная цена для поиска">
+									<input type="text" name="filters-maxprice" value="500" contenteditable="true" aria-label="Максимальная цена для поиска" tabindex="0">
 								</label>
 								&#8381;
 							</legend>
 							<div class="filter-price__price-controls">
-								<div class="price-controls__line"></div>
-								<div class="price-controls__line-between"></div>
-								<div class="price-controls__toggle-min"></div>
-								<div class="price-controls__toggle-max"></div>
+								<div class="price-controls__line">
+									<div class="price-controls__line-between"></div>
+									<a class="price-controls__toggle-min" aria-label="Тумблер выбора минимальной цены" tabindex="0"></a>
+									<a class="price-controls__toggle-max" aria-label="Тумблер выбора максимальной цены" tabindex="0"></a>
+								</div>
 							</div>
 						</fieldset>
 						<fieldset class="filter-fat">
@@ -311,7 +312,7 @@
 							<div>
 								<img class="product-section__image" src="img/ice-vanilla.jpg" width="267" height="267" alt="Изображение сливочно-ванильного мороженого с кусочками шоколада">
 								<p>440 &#8381;<span>&sol;кг</span></p>
-								<h3><a href="#">Сливочно-ванильное <br> с кусочками шоколада</a></h3>
+								<h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
 							</div>
 							<button class="btn" type="button">Быстрый просмотр</button>
 						</article>
@@ -351,10 +352,10 @@
 
 			<div class="pagination-container">
 				<ul>
-					<li class="pagination__item">
-						<a href="#" title="На предыдущую страницу"></a>
+					<li class="pagination__item pagination__prev">
+						<a title="На предыдущую страницу"></a>
 					</li>
-					<li class="pagination__item">
+					<li class="pagination__item pagination__page-1">
 						<a>1</a>
 					</li>
 					<li class="pagination__item">
@@ -381,25 +382,25 @@
 				<h2 class="visually-hidden">Свяжись с нами!</h2>
 				<ul>
 					<li>
-						<a href="https://www.facebook.com/htmlacademy">
+						<a href="https://www.facebook.com/htmlacademy" aria-label="Перейти на нашу страницу Facebook">
 							<span class="visually-hidden">Наша группа в Facebook</span>
 							<img class="facebook-icon" src="img/svg/facebook.svg" width="36" height="36" alt="Иконка Facebook">
 						</a>
 					</li>
 					<li>
-						<a href="https://vk.com/htmlacademy">
+						<a href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу ВКонтакте">
 							<span class="visually-hidden">Наша группа ВКонтакте</span>
 							<img class="vk-icon" src="img/svg/vk.svg" width="36" height="36" alt="Иконка Вконтакте">
 						</a>
 					</li>
 					<li>
-						<a href="https://www.instagram.com/htmlacademy/">
+						<a href="https://www.instagram.com/htmlacademy/" aria-label="Перейти на нашу страницу Instagram">
 							<span class="visually-hidden">Наша страница в Instagram</span>
 							<img class="instagram-icon" src="img/svg/instagram.svg" width="36" height="36" alt="Иконка Instagram">
 						</a>
 					</li>
 					<li>
-						<a href="https://twitter.com/htmlacademy_ru">
+						<a href="https://twitter.com/htmlacademy_ru" aria-label="Перейти на нашу страницу Twitter">
 							<span class="visually-hidden">Наша страница в Twitter</span>
 							<img class="twitter-icon" src="img/svg/twitter.svg" width="36" height="36" alt="Иконка Twitter">
 						</a>
@@ -423,10 +424,10 @@
 			</ul>
 
 			<div class="footer__copyright">
-				<a href="https://htmlacademy.ru/intensive/htmlcss">
+				<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на страницу интенсивного курса HTML Academy">
 					<img src="img/svg/logo-academy.svg" width="108" height="39" alt="Логотип HTML Academy">
 				</a>
-				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2020</p>
+				<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на страницу интенсивного курса HTML Academy">HTML Academy</a> &copy; 2020</p>
 			</div>
 		</footer>
 	</div>
